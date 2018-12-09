@@ -29,15 +29,16 @@
         </div>
             </div>
             <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">
-                <div class="container">
+                <div id="musiclibrary">
+                <div class="container ">
                     <div class="row">
                         <div class="col-lg-4 border-bottom">
-                            <h6 class="font-weight-bold">Project name</h6>
+                            <h6 class="font-weight-bold" data-sort="artist">Project name</h6>
                         </div>
-                        <div class="col-lg-2 border-bottom">
+                        <div class="col-lg-2 border-bottom" data-sort="album">
                             <h6 class="font-weight-bold">City</h6>
                         </div>
-                        <div class="col-lg-2 border-bottom">
+                        <div class="col-lg-2 border-bottom" data-sort="track">
                             <h6 class="font-weight-bold">Country</h6>
                         </div>
                         <div class="col-lg-2 border-bottom">
@@ -47,23 +48,53 @@
                             <h6 class="font-weight-bold">Year</h6>
                         </div>
                     </div>
+                    </div>
+                    <div class="container list">
+                    <?php query_posts('post_type=selected_projects'); ?>
+                    <?php while (have_posts()) : the_post(); ?>
                     <div class="row">
+                        
+	                
                         <div class="col-lg-4 border-bottom">
-                            <h6 class="mb-0 py-3">Villa forte</h6>
+                            <h6 class="mb-0 py-3 artist"><?php the_title(); ?></h6>
                         </div>
                         <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3">Torino</h6>
+                            <h6 class="mb-0 py-3 album"><?php the_field('location'); ?></h6>
                         </div>
                         <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3">Italy</h6>
+                            <h6 class="mb-0 py-3 track"><?php the_field('location'); ?></h6>
                         </div>
                         <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3">Residential</h6>
+                            <h6 class="mb-0 py-3"><?php the_field('tipology'); ?></h6>
                         </div>
                         <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3">2017-2018</h6>
+                            <h6 class="mb-0 py-3"><?php the_field('year'); ?></h6>
                         </div>
                     </div>
+                    <?php endwhile;?>
+                    <?php query_posts('post_type=all_projects'); ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                    <div class="row">
+                        
+	                
+                        <div class="col-lg-4 border-bottom">
+                            <h6 class="mb-0 py-3"><?php the_title(); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="mb-0 py-3"><?php the_field('city'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="mb-0 py-3"><?php the_field('country'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="mb-0 py-3"><?php the_field('tipology'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="mb-0 py-3"><?php the_field('year'); ?></h6>
+                        </div>
+                    </div>
+                    <?php endwhile;?>
+                </div>
                 </div>
             </div>
 

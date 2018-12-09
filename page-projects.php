@@ -1,4 +1,4 @@
-<?php /* Template Name: projectyes */ ?>
+<?php /* Template Name: projects */ ?>
 <?php get_header(); ?>
 <body class="projects-page">
     <div class="container-fluid">
@@ -13,22 +13,19 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-selectedProjects" role="tabpanel" aria-labelledby="nav-selectedProjects-tab">
                 <div class="row">
-                <img src="<?php the_field('test'); ?>" alt="">
-                <?php 
-		query_posts('post_type=selected_projects');
-	?>
-                <?php while (have_posts()) : the_post(); ?>
-            <div class="col-lg-4">
-            <div class="project" style=" background-image: url(<?php the_field('mainImg1'); ?>)">
-                
-                    <div class="project__opacity"></div>
-                    <div class="project__info">
-                        <a href="<?php the_permalink() ?>" class="project__title"><?php the_title(); ?></a>
-                        <p class="project__location"><?php the_field('location'); ?></p>
-                    </div>
-                </div>
-            </div>
-	<?php endwhile;?>
+                    <?php query_posts('post_type=selected_projects'); ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                    
+                        <div class="col-lg-4">
+                            <div class="project" style=" background-image: url(<?php the_field('imgmain'); ?>)">
+                                <div class="project__opacity"></div>
+                                <div class="project__info">
+                                    <a href="<?php the_permalink() ?>" class="project__title"><?php the_title(); ?></a>
+                                    <p class="project__location"><?php the_field('location'); ?> <?php the_field('selected'); ?></p>
+                                </div>
+                            </div>
+                        </div>
+	                <?php endwhile;?>
         </div>
             </div>
             <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">

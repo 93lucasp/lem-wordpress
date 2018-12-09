@@ -4,7 +4,7 @@
 	<div class="container projectPage">
         <div class="row">
             <div class="col-lg-6 mb-5">
-                <div class="projectPage__mainImg " style="background-image: url(<?php the_field('mainImg1'); ?>)"></div>
+                <div class="projectPage__mainImg " style="background-image: url(<?php the_field('imgmain'); ?>)"></div>
 
             </div>
             <div class="col-lg-6 mb-5">

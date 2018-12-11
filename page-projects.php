@@ -11,11 +11,98 @@
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-lg-4 border-bottom">
+                            <h6 class="font-weight-bold" >Project name</h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold">City</h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold">Country</h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold">Tipology</h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold">Year</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row <?php the_field('link'); ?>">
+                        <div class="col-lg-4 border-bottom">
+                        <a href="<?php the_field('url'); ?>">
+                        <h6 class="font-weight-bold" ><?php the_field('title'); ?></h6>
+                        </a>
+                            
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold"><?php the_field('city'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold"><?php the_field('country'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold"><?php the_field('typology'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold"><?php the_field('year'); ?></h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 border-bottom">
+                            <h6 class="font-weight-bold" ><?php the_field('title2'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold"><?php the_field('city2'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold"><?php the_field('country2'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold"><?php the_field('typology2'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold"><?php the_field('year2'); ?></h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 border-bottom">
+                            <h6 class="font-weight-bold" ><?php the_field('title3'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold"><?php the_field('city3'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom" >
+                            <h6 class="font-weight-bold"><?php the_field('country3'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold"><?php the_field('typology3'); ?></h6>
+                        </div>
+                        <div class="col-lg-2 border-bottom">
+                            <h6 class="font-weight-bold"><?php the_field('year3'); ?></h6>
+                        </div>
+                    </div>
+                   
+                
+
+                   
+                    <?php while ( have_rows('test') ) : the_row();?>
+
+                       
+                        
+                        <h1><?php the_sub_field('title'); ?></h1>
+
+                    <?php endwhile;?>
+                </div>
+            </div>
             <div class="tab-pane fade show active" id="nav-selectedProjects" role="tabpanel" aria-labelledby="nav-selectedProjects-tab">
                 <div class="row">
                     <?php query_posts('post_type=selected_projects'); ?>
                     <?php while (have_posts()) : the_post(); ?>
-                    
                         <div class="col-lg-4">
                             <div class="project" style=" background-image: url(<?php the_field('imgmain'); ?>)">
                                 <div class="project__opacity"></div>
@@ -26,79 +113,10 @@
                             </div>
                         </div>
 	                <?php endwhile;?>
+                </div>
+            </div>
+            
         </div>
-            </div>
-            <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">
-                <div id="musiclibrary">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-lg-4 border-bottom">
-                            <h6 class="font-weight-bold" data-sort="artist">Project name</h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom" data-sort="album">
-                            <h6 class="font-weight-bold">City</h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom" data-sort="track">
-                            <h6 class="font-weight-bold">Country</h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="font-weight-bold">Tipology</h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="font-weight-bold">Year</h6>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="container list">
-                    <?php query_posts('post_type=selected_projects'); ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                    <div class="row">
-                        
-	                
-                        <div class="col-lg-4 border-bottom">
-                            <h6 class="mb-0 py-3 artist"><?php the_title(); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3 album"><?php the_field('location'); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3 track"><?php the_field('location'); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3"><?php the_field('tipology'); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3"><?php the_field('year'); ?></h6>
-                        </div>
-                    </div>
-                    <?php endwhile;?>
-                    <?php query_posts('post_type=all_projects'); ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                    <div class="row">
-                        
-	                
-                        <div class="col-lg-4 border-bottom">
-                            <h6 class="mb-0 py-3"><?php the_title(); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3"><?php the_field('city'); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3"><?php the_field('country'); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3"><?php the_field('tipology'); ?></h6>
-                        </div>
-                        <div class="col-lg-2 border-bottom">
-                            <h6 class="mb-0 py-3"><?php the_field('year'); ?></h6>
-                        </div>
-                    </div>
-                    <?php endwhile;?>
-                </div>
-                </div>
-            </div>
 
-        </div>
-        
     </div>
     <?php get_footer(); ?>

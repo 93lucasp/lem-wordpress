@@ -8917,6 +8917,11 @@ a.text-dark:hover {
     top: 60px;
     width: 300px
 }
+.contact-sentence{
+    position: absolute;
+    bottom: 30px;
+    width: 300px
+}
 
 .home {
     background-color: #000;

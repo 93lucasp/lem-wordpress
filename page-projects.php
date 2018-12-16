@@ -78,7 +78,7 @@
             </div>
             <div class="tab-pane fade show active" id="nav-selectedProjects" role="tabpanel" aria-labelledby="nav-selectedProjects-tab">
                 <div class="row">
-                    <?php query_posts('post_type=selected_projects'); ?>
+                    <?php query_posts('post_type=projects'); ?>
                     <?php while (have_posts()) : the_post(); ?>
                         <div class="col-6 col-lg-4">
                             <div class="project" style=" background-image: url(<?php the_field('imgmain'); ?>)">

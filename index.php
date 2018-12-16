@@ -14,4 +14,4 @@
         </div>
 
     </div>
-	<p class="text-white contact-sentence text-center">Feel free to contact us any time <br> <a href="mailto:info@agenzialem.it" class="text-white">info@agenzialem.it</a></p>
+	<p class="text-white contact-sentence text-center" style="position: absolute; bottom: 0;">Feel free to contact us any time <br> <a href="mailto:info@agenzialem.it" class="text-white">info@agenzialem.it</a></p>

@@ -1,17 +1,19 @@
 
-			<div id="footer">
-
-				<a href="https://twitter.com/onemonthedu">
-					<img src="<?php bloginfo(template_directory); ?>/images/social-icon-twitter.png" alt="Twitter">
-				</a>
-
-				<a href="#">
-					<img src="<?php bloginfo(template_directory); ?>/images/social-icon-facebook.png" alt="Facebook">
-				</a>
-				
-			</div><!-- #footer -->
+			<div class="footer py-4 mt-4">
+    <div class="container d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+            <p>© 2018 LEM Agenzia Architettura</p>
+           
+            
+        </div>
+        <div class="d-flex align-items-center">
+            <a href="#">info@agenzialem.it</a>
+           
+        </div>
+    </div>
+</div><!-- #footer -->
 		<?php wp_footer(); ?>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="<?php bloginfo(template_directory); ?>/js/app.js"></script>
 	</body>
 </html>

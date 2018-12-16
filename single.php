@@ -1,5 +1,22 @@
 <?php get_header(); ?>
 <body class="projects-page">
+<div class="navbar">
+    <div class="container d-flex align-items-center justify-contente-between">
+        <a href="/">
+        <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="">
+        </a>
+        <div>
+            <ul class="list-unstyled d-flex">
+                <li>
+                    <a href="/index.php/projects/" class="link-projects">Projects</a>
+                </li>
+                <li class="mx-3">
+                    <a href="/studio.html">Studio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="container projectPage">
         <div class="row">
@@ -44,32 +61,59 @@
         </div>
         <div class="row">
             <div class="col-lg-6  mb-5">
-                <div class="projectPage__images" style="background-image: url(<?php the_field('img1'); ?>)">
-
-                </div>
+                <a href="<?php the_field('img1'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                    <div class="projectPage__images" style="background-image: url(<?php the_field('img1'); ?>)"></div>
+                </a>
             </div>
             <div class="col-lg-6  mb-5">
-                <div class="projectPage__images" style="background-image: url(<?php the_field('img2'); ?>)">
-
-                </div>
+                <a href="<?php the_field('img2'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                    <div class="projectPage__images" style="background-image: url(<?php the_field('img2'); ?>)"></div>
+                </a>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-3  mb-5">
-                <div class="projectPage__images" style="background-image: url(<?php the_field('img3'); ?>)">
-
-                </div>
+                <a href="<?php the_field('img3'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                    <div class="projectPage__images" style="background-image: url(<?php the_field('img3'); ?>)"></div>
+                </a>
             </div>
             <div class="col-lg-9  mb-5">
-                <div class="projectPage__images" style="background-image: url(<?php the_field('img4'); ?>)">
-
-                </div>
+                <a href="<?php the_field('img4'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                    <div class="projectPage__images" style="background-image: url(<?php the_field('img4'); ?>)"></div>
+                </a>
             </div>
         </div>
-
+        <?php if( have_rows('images') ): ?>
+            <?php while ( have_rows('images') ) : the_row();?>
+                <div class="row">
+                    <div class="col-lg-9  mb-5">
+                        <a href="<?php the_sub_field('img5'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img5'); ?>)"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3  mb-5">
+                        <a href="<?php the_sub_field('img6'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img6'); ?>)"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3  mb-5">
+                        <a href="<?php the_sub_field('img7'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img7'); ?>)"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-9  mb-5">
+                        <a href="<?php the_sub_field('img8'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img8'); ?>)"></div>
+                        </a>
+                    </div>
+                </div>
+            <?php endwhile;?>
+        <?php endif;?>
     </div>
-				<?php endwhile; else: ?>
-			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-		<?php endif; ?>
+        <?php endwhile; else: ?>
+    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
 
 <?php get_footer(); ?>

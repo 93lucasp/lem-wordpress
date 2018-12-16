@@ -4,7 +4,7 @@
 <div class="navbar">
     <div class="container d-flex align-items-center justify-contente-between">
         <a href="/">
-        <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="">
+        <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="lem logo" class="logo">
         </a>
         <div>
             <ul class="list-unstyled d-flex">
@@ -31,19 +31,19 @@
             <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">
                 <div class="container ">
                     <div class="row">
-                        <div class="col-lg-4 border-bottom">
+                        <div class="col-5 col-lg-4 border-bottom">
                             <h6 class="font-weight-bold" >Project name</h6>
                         </div>
-                        <div class="col-lg-2 border-bottom" >
+                        <div class="col-2 border-bottom" >
                             <h6 class="font-weight-bold">City</h6>
                         </div>
-                        <div class="col-lg-2 border-bottom" >
+                        <div class="col-2 border-bottom" >
                             <h6 class="font-weight-bold">Country</h6>
                         </div>
-                        <div class="col-lg-2 border-bottom">
+                        <div class="col-3 col-lg-2 border-bottom">
                             <h6 class="font-weight-bold">Tipology</h6>
                         </div>
-                        <div class="col-lg-2 border-bottom">
+                        <div class="col-2 border-bottom d-none d-lg-block">
                             <h6 class="font-weight-bold">Year</h6>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                     <?php while ( have_rows('row_projects') ) : the_row();?>
                     <a href="<?php the_sub_field('url'); ?>" class="table--listProjects <?php the_sub_field('haslink'); ?>">
                         <div class="row">
-                            <div class="col-4 border-bottom d-flex">
+                            <div class="col-5 col-lg-4 border-bottom d-flex">
                                 <img src="<?php bloginfo(template_directory); ?>/images/icons/link.svg" alt="" class="mr-2 icon">
                                 <h6 class="mb-0 py-3"><?php the_sub_field('title'); ?></h6>
                             </div>
@@ -63,10 +63,10 @@
                             <div class="col-2 border-bottom">
                                 <h6 class="mb-0 py-3"><?php the_sub_field('country'); ?></h6>
                             </div>
-                            <div class="col-2 border-bottom">
+                            <div class="col-3 col-lg-2 border-bottom">
                                 <h6 class="mb-0 py-3"><?php the_sub_field('tipology'); ?></h6>
                             </div>
-                            <div class="col-2 border-bottom">
+                            <div class="col-2 border-bottom d-none d-lg-block">
                                 <h6 class="mb-0 py-3"><?php the_sub_field('year'); ?></h6>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                 <div class="row">
                     <?php query_posts('post_type=projects'); ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <div class="col-6 col-lg-4">
+                        <div class="col-lg-4">
                             <div class="project" style=" background-image: url(<?php the_field('imgmain'); ?>)">
                                 <div class="project__opacity"></div>
                                 <div class="project__info">

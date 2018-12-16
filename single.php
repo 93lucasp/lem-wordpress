@@ -3,7 +3,7 @@
 <div class="navbar">
     <div class="container d-flex align-items-center justify-contente-between">
         <a href="/">
-        <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="">
+        <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="lem logo" class="logo">
         </a>
         <div>
             <ul class="list-unstyled d-flex">
@@ -20,17 +20,17 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="container projectPage">
         <div class="row">
-            <div class="col-lg-6 mb-5">
+            <div class="col-lg-6 mb-3">
                 <div class="projectPage__mainImg " style="background-image: url(<?php the_field('imgmain'); ?>)"></div>
 
             </div>
-            <div class="col-lg-6 mb-5">
+            <div class="col-lg-6 mb-3">
                 <h1 class="projectPage__title"><?php the_title(); ?></h1>
                 <p class="projectPage__description"><?php the_content();?></p>
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="text-left w-50 ml-auto">
                         <h6 class="projectPage__label">Location</h6>
-                        <h6 class="projectPage__description"><?php the_field('location'); ?>,</h6>
+                        <h6 class="projectPage__description"><?php the_field('location'); ?></h6>
                     </div>
                     <div class="text-left w-50 ml-auto">
                         <h6 class="projectPage__label">Team</h6>
@@ -57,6 +57,9 @@
                         <h6 class="projectPage__description"><?php the_field('year'); ?></h6>
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-12 mb-5">
+            <p class="projectPage__description"><?php the_field('longdescription'); ?></p>
             </div>
         </div>
         <div class="row">

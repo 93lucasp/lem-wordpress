@@ -2,7 +2,7 @@
 <?php /* Template Name: home */ ?>
 <?php get_header(); ?>
 <body class="home d-flex align-items-center justify-content-center position-relative">
-    <video autoplay muted loop class="video-bg">
+    <video autoplay muted loop playsinline class="video-bg">
         <source src="<?php bloginfo(template_directory); ?>/images/galaxy.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>

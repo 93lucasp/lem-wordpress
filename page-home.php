@@ -11,7 +11,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-6 col-lg-5 ml-auto">
-                <a href="/index.php/projects/" class="cta d-flex align-items-center justify-content-center">
+                <a href="/projects" class="cta d-flex align-items-center justify-content-center">
                 <div class="cta__line"></div>
                     <div class="text-center d-flex align-items-center">
                         <h1>Projects</h1>
@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div class="col-6 col-lg-5 mr-auto">
-                <a href="#" class="cta d-flex align-items-center justify-content-center">
+                <a href="/studio" class="cta d-flex align-items-center justify-content-center">
                     <div class="cta__line"></div>
                     <div class="text-center d-flex align-items-center">
                         <h1>Studio</h1>

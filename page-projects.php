@@ -12,7 +12,7 @@
                     <a href="/index.php/projects/" class="link-projects">Projects</a>
                 </li>
                 <li class="mx-3">
-                    <a href="/studio.html">Studio</a>
+                    <a href="/studio">Studio</a>
                 </li>
             </ul>
         </div>

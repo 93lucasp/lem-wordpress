@@ -10,20 +10,20 @@
     <img src="<?php bloginfo(template_directory); ?>/images/lem-white.svg" alt="" class="logo logo--absolute">
     <div class="container mt-4">
         <div class="row">
-            <div class="col-6 col-lg-5 ml-auto">
+            <div class="col-lg-5 ml-auto">
                 <a href="/projects" class="cta d-flex align-items-center justify-content-center">
                 <div class="cta__line"></div>
                     <div class="text-center d-flex align-items-center">
-                        <h1>Projects</h1>
+                        <h1 class="cta__title">Projects</h1>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
             </div>
-            <div class="col-6 col-lg-5 mr-auto">
+            <div class="col-lg-5 mr-auto">
                 <a href="/studio" class="cta d-flex align-items-center justify-content-center">
                     <div class="cta__line"></div>
                     <div class="text-center d-flex align-items-center">
-                        <h1>Studio</h1>
+                        <h1 class="cta__title">Studio</h1>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -35,12 +35,12 @@
         <div class="container d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
                 <p>↑ 45°04'13" → 7°41'12"</p>
-                <div class="footer__line"></div>
+                <div class="footer-home__line"></div>
                 
             </div>
             <div class="d-flex align-items-center">
                 <a href="#">info@agenzialem.it</a>
-                <div class="footer__line "></div>
+                <div class="footer-home__line "></div>
             </div>
         </div>
     </div>

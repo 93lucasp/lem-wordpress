@@ -4,17 +4,38 @@
 <div class="navbar">
     <div class="container d-flex align-items-center justify-contente-between">
         <a href="/">
-        <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="lem logo" class="logo">
+            <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="lem logo" class="logo">
         </a>
-        <div>
+        <div class="d-none d-lg-block">
             <ul class="list-unstyled d-flex">
                 <li>
-                    <a href="/index.php/projects/" class="link-projects">Projects</a>
+                    <a href="/projects" class="link-projects">Projects</a>
                 </li>
                 <li class="mx-3">
                     <a href="/studio">Studio</a>
                 </li>
             </ul>
+        </div>
+        <div class="hamburger d-lg-none">
+            <div class="hamburger__item"></div>
+        </div>
+        <div class="navbar__menu  d-lg-none">
+            <ul class="list-unstyled ">
+                 <li>
+                    <a href="/" class="link-mobile link-home">Home</a>
+                </li>
+                <li>
+                    <a href="/projects" class="link-mobile link-projects">Projects</a>
+                </li>
+                <li >
+                    <a href="/studio" class="link-mobile link-studio">Studio</a>
+                </li>
+               
+            </ul>
+            <div class="contact">
+                <p>Get in touch</p>
+                <a href="mailto:info@agenzialem.it">info@agenzialem.it</a>
+            </div>
         </div>
     </div>
 </div>
@@ -30,7 +51,7 @@
         <div class="tab-content mb-5" id="nav-tabContent">
             <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">
                 <div class="container ">
-                    <div class="row">
+                    <div class="row row-title">
                         <div class="col-5 col-lg-4 border-bottom">
                             <h6 class="font-weight-bold" >Project name</h6>
                         </div>

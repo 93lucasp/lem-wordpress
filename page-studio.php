@@ -6,15 +6,36 @@
         <a href="/">
         <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="lem logo" class="logo">
         </a>
-        <div>
+        <div class="d-none d-lg-block">
             <ul class="list-unstyled d-flex">
                 <li>
-                    <a href="/index.php/projects/" class="link-projects">Projects</a>
+                    <a href="/projects">Projects</a>
                 </li>
                 <li class="mx-3">
-                    <a href="/studio.html" class="link-studio">Studio</a>
+                    <a href="/studio" class="link-studio" >Studio</a>
                 </li>
             </ul>
+        </div>
+        <div class="hamburger d-lg-none">
+            <div class="hamburger__item"></div>
+        </div>
+        <div class="navbar__menu  d-lg-none">
+            <ul class="list-unstyled ">
+                 <li>
+                    <a href="/" class="link-mobile link-home">Home</a>
+                </li>
+                <li>
+                    <a href="/projects" class="link-mobile link-projects">Projects</a>
+                </li>
+                <li >
+                    <a href="/studio" class="link-mobile link-studio">Studio</a>
+                </li>
+               
+            </ul>
+            <div class="contact">
+                <p>Get in touch</p>
+                <a href="mailto:info@agenzialem.it">info@agenzialem.it</a>
+            </div>
         </div>
     </div>
 </div>
@@ -133,7 +154,7 @@ CVSolidElement.prototype.renderInnerContent=function(){var t=this.canvasContext;
             <div class="col-lg-8 mr-auto d-lg-flex">
 
                 <p class="studioPage__text">
-                    <span class="font-weight-bold"> Head Office Italy</span> <br>
+                    <span class="font-weight-bold"> Office</span> <br>
                     C.so Stati Uniti, 53 <br>
                     10129 — Torino, IT <br>
                 </p>

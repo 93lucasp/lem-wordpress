@@ -27,7 +27,7 @@
                     aria-controls="nav-allProjects" aria-selected="false">All projects</a>
             </div>
         </nav>
-        <div class="tab-content" id="nav-tabContent">
+        <div class="tab-content mb-5" id="nav-tabContent">
             <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">
                 <div class="container ">
                     <div class="row">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container ">
                 
                     <?php while ( have_rows('row_projects') ) : the_row();?>
                     <a href="<?php the_sub_field('url'); ?>" class="table--listProjects <?php the_sub_field('haslink'); ?>">

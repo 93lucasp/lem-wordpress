@@ -106,42 +106,24 @@ CVSolidElement.prototype.renderInnerContent=function(){var t=this.canvasContext;
             </div>
         </div>
     </div>
+
+   
+   
+     <?php while ( have_rows('add_row') ) : the_row();?>
     <div class="container mb-5 pb-5">
         <div class="row">
             <div class="col-lg-2 ml-auto">
-                <h4 class="studioPage__title">Collaborators</h4>
+                <h4 class="studioPage__title"><?php the_sub_field('title'); ?></h4>
                 <div class="line-studio"></div>
             </div>
             <div class="col-lg-8 mr-auto">
-                <p class="studioPage__text"><?php the_field('collaborators'); ?>
+                <p class="studioPage__text"><?php the_sub_field('description'); ?>
                 </p>
             </div>
         </div>
     </div>
-    <div class="container mb-5 pb-5">
-        <div class="row">
-            <div class="col-lg-2 ml-auto">
-                <h4 class="studioPage__title">Partners</h4>
-                <div class="line-studio"></div>
-            </div>
-            <div class="col-lg-8 mr-auto">
-                <p class="studioPage__text"><?php the_field('partners'); ?>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="container mb-5 pb-5">
-        <div class="row">
-            <div class="col-lg-2 ml-auto">
-                <h4 class="studioPage__title">Clients</h4>
-                <div class="line-studio"></div>
-            </div>
-            <div class="col-lg-8 mr-auto">
-                <p class="studioPage__text"><?php the_field('clients'); ?>
-                </p>
-            </div>
-        </div>
-    </div>
+    <?php endwhile;?>
+    
     <div class="container mb-5 pb-5">
         <div class="row">
             <div class="col-lg-2 ml-auto">

@@ -74,7 +74,7 @@
         <div class="row">
             <div class="col-lg-3  mb-30">
                 <a href="<?php the_field('img3'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                    <div class="projectPage__images" style="background-image: url(<?php the_field('img3'); ?>)"></div>
+                    <div class="projectPage__images projectPage__images--vertical" style="background-image: url(<?php the_field('img3'); ?>)"></div>
                 </a>
             </div>
             <div class="col-lg-9  mb-30">
@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-lg-3  mb-30">
                         <a href="<?php the_sub_field('img6'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img6'); ?>)"></div>
+                            <div class="projectPage__images projectPage__images--vertical" style="background-image: url(<?php the_sub_field('img6'); ?>)"></div>
                         </a>
                     </div>
                 </div>
@@ -113,11 +113,11 @@
         <?php endif;?>
         <?php if( have_rows('add_col') ): ?>
         <div class="row mb-5">
-        <div class="col-lg-12">
+        <div class="col-lg-12 my-3">
                 <h5 class="font-weight-bold">Credits</h5>
             </div>
         <?php while ( have_rows('add_col') ) : the_row();?>
-            <div class="col-lg-4">
+            <div class="col-lg-4 mb-3">
                 <p class="paragraph-end font-weight-bold"><?php the_sub_field('title'); ?></p>
                 <p class="paragraph-end"><?php the_sub_field('description'); ?></p>
             </div>

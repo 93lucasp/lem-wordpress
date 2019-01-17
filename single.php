@@ -5,15 +5,36 @@
         <a href="/">
         <img src="<?php bloginfo(template_directory); ?>/images/lem-dark.svg" alt="lem logo" class="logo">
         </a>
-        <div>
+        <div class="d-none d-lg-block">
             <ul class="list-unstyled d-flex">
                 <li>
-                    <a href="/projects" class="link-projects">Projects</a>
+                    <a href="/projects">Projects</a>
                 </li>
                 <li class="mx-3">
-                    <a href="/studio">Studio</a>
+                    <a href="/studio" class="link-studio" >Studio</a>
                 </li>
             </ul>
+        </div>
+        <div class="hamburger d-lg-none">
+            <div class="hamburger__item"></div>
+        </div>
+        <div class="navbar__menu  d-lg-none">
+            <ul class="list-unstyled ">
+                 <li>
+                    <a href="/" class="link-mobile link-home">Home</a>
+                </li>
+                <li>
+                    <a href="/projects" class="link-mobile ">Projects</a>
+                </li>
+                <li >
+                    <a href="/studio" class="link-mobile ">Studio</a>
+                </li>
+               
+            </ul>
+            <div class="contact">
+                <p>Get in touch</p>
+                <a href="mailto:info@agenzialem.it">info@agenzialem.it</a>
+            </div>
         </div>
     </div>
 </div>
@@ -49,7 +70,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-12 mb-3 mb-lg-5">
+            <div class="col-lg-12 mt-4 mt-lg-0 mb-3 mb-lg-5">
                 <div class="projectPage__mainImg " style="background-image: url(<?php the_field('imgmain'); ?>)"></div>
             </div>
             <div class="col-lg-5 ml-lg-auto my-3 my-lg-5">

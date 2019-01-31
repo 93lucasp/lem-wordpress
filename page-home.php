@@ -4,7 +4,6 @@
 <body class="home d-flex align-items-center justify-content-center position-relative">
     <video autoplay muted loop playsinline class="video-bg">
         <source src="<?php bloginfo(template_directory); ?>/images/galaxy.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
     </video>
     <div class="pattern-home" style="background-image: url('<?php bloginfo(template_directory); ?>/images/pattern.png')"></div>
     <img src="<?php bloginfo(template_directory); ?>/images/lem-white.svg" alt="" class="logo logo--effect">
@@ -34,12 +33,12 @@
     <div class="footer-home py-4 mt-4">
         <div class="container d-lg-flex align-items-center justify-content-center justify-content-lg-between">
             <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                <p>↑ 45°04'13" → 7°41'12"</p>
+                <a href="https://www.google.com/maps/place/LEM/@45.0644661,7.6624413,17z/data=!3m1!4b1!4m5!3m4!1s0x47886d9906c6d5fd:0x66802c4f638e305f!8m2!3d45.0644661!4d7.66463" target="_blank">↑ 45°04'13" → 7°41'12"</p>
                 <div class="footer-home__line"></div>
                 
             </div>
             <div class="d-flex align-items-center justify-content-center justify-content-lg-start">
-                <a href="#">info@agenzialem.it</a>
+                <a href="mailto:info@agenzialem.it">info@agenzialem.it</a>
                 <div class="footer-home__line "></div>
             </div>
         </div>

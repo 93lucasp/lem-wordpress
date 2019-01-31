@@ -51,51 +51,52 @@
         <div class="tab-content mb-5" id="nav-tabContent">
             <div class="tab-pane fade" id="nav-allProjects" role="tabpanel" aria-labelledby="nav-allProjects-tab">
                 <div class="container ">
-                    <div class="row row-title">
-                        <div class="col-5 col-lg-4 border-bottom">
-                            <h6 class="font-weight-bold" >Project name</h6>
-                        </div>
-                        <div class="col-2 border-bottom" >
-                            <h6 class="font-weight-bold">City</h6>
-                        </div>
-                        <div class="col-2 border-bottom" >
-                            <h6 class="font-weight-bold">Country</h6>
-                        </div>
-                        <div class="col-3 col-lg-2 border-bottom">
-                            <h6 class="font-weight-bold">Tipology</h6>
-                        </div>
-                        <div class="col-2 border-bottom d-none d-lg-block">
-                            <h6 class="font-weight-bold">Year</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="container ">
-                
-                    <?php while ( have_rows('row_projects') ) : the_row();?>
-                    <a href="<?php the_sub_field('url'); ?>" class="table--listProjects <?php the_sub_field('haslink'); ?>">
-                        <div class="row">
-                            <div class="col-5 col-lg-4 border-bottom d-flex">
-                                <img src="<?php bloginfo(template_directory); ?>/images/icons/link.svg" alt="" class="mr-2 icon">
-                                <h6 class="mb-0 py-3"><?php the_sub_field('title'); ?></h6>
-                            </div>
-                            <div class="col-2 border-bottom">
-                                <h6 class="mb-0 py-3"><?php the_sub_field('city'); ?></h6>
-                            </div>
-                            <div class="col-2 border-bottom">
-                                <h6 class="mb-0 py-3"><?php the_sub_field('country'); ?></h6>
-                            </div>
-                            <div class="col-3 col-lg-2 border-bottom">
-                                <h6 class="mb-0 py-3"><?php the_sub_field('tipology'); ?></h6>
-                            </div>
-                            <div class="col-2 border-bottom d-none d-lg-block">
-                                <h6 class="mb-0 py-3"><?php the_sub_field('year'); ?></h6>
-                            </div>
-                        </div>
-                    </a>
-                        
+                <table id="listProject" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th class="font-weight-bold">Project name</th>
+                                <th class="font-weight-bold">City</th>
+                                <th class="font-weight-bold">Country</th>
+                                <th class="font-weight-bold">Tipology</th>
+                                <th class="font-weight-bold">Year</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php while ( have_rows('row_projects') ) : the_row();?>
+                        <tr class="table--listProjects <?php the_sub_field('haslink'); ?>">
+                            <td>
+                                <a href="<?php the_sub_field('url'); ?>" class="d-flex align-items-center">
+                                    <img src="<?php bloginfo(template_directory); ?>/images/icons/link.svg" alt="" class="mr-2 icon">
+                                    <h6 class="mb-0"><?php the_sub_field('title'); ?></h6>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="<?php the_sub_field('url'); ?>">
+                                    <h6 class="mb-0"><?php the_sub_field('city'); ?></h6>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="<?php the_sub_field('url'); ?>">
+                                    <h6 class="mb-0"><?php the_sub_field('country'); ?></h6>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="<?php the_sub_field('url'); ?>">
+                                    <h6 class="mb-0"><?php the_sub_field('tipology'); ?></h6>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="<?php the_sub_field('url'); ?>">
+                                    <h6 class="mb-0"><?php the_sub_field('year'); ?></h6>
+                                </a>
+                            </td>
+                        </tr>
+                         <?php endwhile;?>
+                        </tbody>
+                </table>
                     
-                    <?php endwhile;?>
                 </div>
+              
             </div>
             <div class="tab-pane fade show active" id="nav-selectedProjects" role="tabpanel" aria-labelledby="nav-selectedProjects-tab">
                 <div class="row">

@@ -55,9 +55,9 @@
                         <thead>
                             <tr>
                                 <th class="font-weight-bold">Project name</th>
-                                <th class="font-weight-bold">City</th>
-                                <th class="font-weight-bold">Country</th>
-                                <th class="font-weight-bold">Tipology</th>
+                                <th class="font-weight-bold d-none d-lg-block">City</th>
+                                <th class="font-weight-bold d-none d-lg-block">Country</th>
+                                <th class="font-weight-bold d-none d-lg-block">Tipology</th>
                                 <th class="font-weight-bold">Year</th>
                             </tr>
                         </thead>
@@ -70,17 +70,17 @@
                                     <h6 class="mb-0"><?php the_sub_field('title'); ?></h6>
                                 </a>
                             </td>
-                            <td>
+                            <td class="d-none d-lg-block">
                                 <a href="<?php the_sub_field('url'); ?>">
                                     <h6 class="mb-0"><?php the_sub_field('city'); ?></h6>
                                 </a>
                             </td>
-                            <td>
+                            <td class="d-none d-lg-block">
                                 <a href="<?php the_sub_field('url'); ?>">
                                     <h6 class="mb-0"><?php the_sub_field('country'); ?></h6>
                                 </a>
                             </td>
-                            <td>
+                            <td class="d-none d-lg-block">
                                 <a href="<?php the_sub_field('url'); ?>">
                                     <h6 class="mb-0"><?php the_sub_field('tipology'); ?></h6>
                                 </a>

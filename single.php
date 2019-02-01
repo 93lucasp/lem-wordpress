@@ -42,7 +42,7 @@
 	<div class="container projectPage">
         <div class="row">
             
-            <div class="col-lg-6 mb-3 mb-lg-5 text-lg-center">
+            <div class="col-lg-5 ml-lg-auto mb-3 mb-lg-5">
                 <h1 class="projectPage__title"><?php the_title(); ?></h1>
                 
                 
@@ -92,20 +92,21 @@
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-3  mb-30">
-                <a href="<?php the_field('img3'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                    <div class="projectPage__images projectPage__images--vertical" style="background-image: url(<?php the_field('img3'); ?>)"></div>
-                </a>
-            </div>
-            <div class="col-lg-9  mb-30">
-                <a href="<?php the_field('img4'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                    <div class="projectPage__images" style="background-image: url(<?php the_field('img4'); ?>)"></div>
-                </a>
-            </div>
-        </div>
-        <?php if( have_rows('imagesDoubleLeft') ): ?>
-            <?php while ( have_rows('imagesDoubleLeft') ) : the_row();?>
+        
+        <?php if( have_rows('imagesDouble') ): ?>
+            <?php while ( have_rows('imagesDouble') ) : the_row();?>
+                <div class="row">
+                    <div class="col-lg-3  mb-30">
+                        <a href="<?php the_sub_field('img3'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images projectPage__images--vertical" style="background-image: url(<?php the_sub_field('img3'); ?>)"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-9  mb-30">
+                        <a href="<?php the_sub_field('img4'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img4'); ?>)"></div>
+                        </a>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-lg-9  mb-30">
                         <a href="<?php the_sub_field('img5'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
@@ -120,37 +121,21 @@
                 </div>
             <?php endwhile;?>
         <?php endif;?>
-        <?php if( have_rows('imagesdoubleright') ): ?>
-            <?php while ( have_rows('imagesdoubleright') ) : the_row();?>
-                <div class="row">
-                    <div class="col-lg-3  mb-30">
-                        <a href="<?php the_sub_field('img7'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img7'); ?>)"></div>
-                        </a>
-                    </div>
-                    <div class="col-lg-9  mb-30">
-                        <a href="<?php the_sub_field('img8'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img8'); ?>)"></div>
-                        </a>
-                    </div>
-                </div>
-            <?php endwhile;?>
-        <?php endif;?>
         <?php if( have_rows('imagestriple') ): ?>
             <?php while ( have_rows('imagestriple') ) : the_row();?>
                 <div class="row row--3">
                 
                     <div class="col-lg-6  ">
-                        <a href="<?php the_sub_field('img9'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                            <div class="projectPage__images mb-30" style="background-image: url(<?php the_sub_field('img9'); ?>)"></div>
+                        <a href="<?php the_sub_field('img7'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images mb-30" style="background-image: url(<?php the_sub_field('img7'); ?>)"></div>
                         </a>
-                        <a href="<?php the_sub_field('img10'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                            <div class="projectPage__images mb-30" style="background-image: url(<?php the_sub_field('img10'); ?>)"></div>
+                        <a href="<?php the_sub_field('img8'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images mb-30" style="background-image: url(<?php the_sub_field('img8'); ?>)"></div>
                         </a>
                     </div>
                     <div class="col-lg-6  ">
-                        <a href="<?php the_sub_field('img11'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
-                            <div class="projectPage__images projectPage__images--vertical mb-30" style="background-image: url(<?php the_sub_field('img11'); ?>)"></div>
+                        <a href="<?php the_sub_field('img9'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images projectPage__images--vertical mb-30" style="background-image: url(<?php the_sub_field('img9'); ?>)"></div>
                         </a>
                     </div>
                 </div>

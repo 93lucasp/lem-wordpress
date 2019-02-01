@@ -93,8 +93,8 @@
             </div>
         </div>
         
-        <?php if( have_rows('imagesDouble') ): ?>
-            <?php while ( have_rows('imagesDouble') ) : the_row();?>
+        <?php if( have_rows('rowA(vert-oriz)') ): ?>
+            <?php while ( have_rows('rowA(vert-oriz)') ) : the_row();?>
                 <div class="row">
                     <div class="col-lg-3  mb-30">
                         <a href="<?php the_sub_field('img3'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
@@ -107,7 +107,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="row">
+              
+            <?php endwhile;?>
+        <?php endif;?>
+        <?php if( have_rows('rowB(oriz-vert)') ): ?>
+            <?php while ( have_rows('rowB(oriz-vert)') ) : the_row();?>
+               <div class="row">
                     <div class="col-lg-9  mb-30">
                         <a href="<?php the_sub_field('img5'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
                             <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img5'); ?>)"></div>
@@ -121,11 +126,11 @@
                 </div>
             <?php endwhile;?>
         <?php endif;?>
-        <?php if( have_rows('imagestriple') ): ?>
-            <?php while ( have_rows('imagestriple') ) : the_row();?>
+          
+        <?php if( have_rows('rowC(oriz-oriz-vert)') ): ?>
+            <?php while ( have_rows('rowC(oriz-oriz-vert)') ) : the_row();?>
                 <div class="row row--3">
-                
-                    <div class="col-lg-6  ">
+                    <div class="col-lg-6  mb-30">
                         <a href="<?php the_sub_field('img7'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
                             <div class="projectPage__images mb-30" style="background-image: url(<?php the_sub_field('img7'); ?>)"></div>
                         </a>
@@ -133,9 +138,57 @@
                             <div class="projectPage__images mb-30" style="background-image: url(<?php the_sub_field('img8'); ?>)"></div>
                         </a>
                     </div>
-                    <div class="col-lg-6  ">
+                    <div class="col-lg-6 mb-30 ">
                         <a href="<?php the_sub_field('img9'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
                             <div class="projectPage__images projectPage__images--vertical mb-30" style="background-image: url(<?php the_sub_field('img9'); ?>)"></div>
+                        </a>
+                    </div>
+                </div>
+            <?php endwhile;?>
+        <?php endif;?>
+        <?php if( have_rows('rowD(oriz-oriz)') ): ?>
+            <?php while ( have_rows('rowD(oriz-oriz)') ) : the_row();?>
+                <div class="row">
+                    <div class="col-lg-6 mb-30">
+                        <a href="<?php the_sub_field('img10'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img10'); ?>)"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6  mb-30">
+                        <a href="<?php the_sub_field('img11'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img11'); ?>)"></div>
+                        </a>
+                    </div>
+                </div>
+            <?php endwhile;?>
+        <?php endif;?>
+        <?php if( have_rows('rowE(vert_oriz)') ): ?>
+            <?php while ( have_rows('rowE(vert_oriz)') ) : the_row();?>
+                <div class="row">
+                    <div class="col-lg-3  mb-30">
+                        <a href="<?php the_sub_field('img12'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images projectPage__images--vertical" style="background-image: url(<?php the_sub_field('img12'); ?>)"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-9  mb-30">
+                        <a href="<?php the_sub_field('img13'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img13'); ?>)"></div>
+                        </a>
+                    </div>
+                </div>
+            <?php endwhile;?>
+        <?php endif;?>
+        <?php if( have_rows('rowF(oriz_vert)') ): ?>
+            <?php while ( have_rows('rowF(oriz_vert)') ) : the_row();?>
+               <div class="row">
+                    <div class="col-lg-9  mb-30">
+                        <a href="<?php the_sub_field('img14'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images" style="background-image: url(<?php the_sub_field('img14'); ?>)"></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3  mb-30">
+                        <a href="<?php the_sub_field('img15'); ?>" rel="lightbox" data-lightbox="<?php the_field('namegallery'); ?>">
+                            <div class="projectPage__images projectPage__images--vertical" style="background-image: url(<?php the_sub_field('img15'); ?>)"></div>
                         </a>
                     </div>
                 </div>
